@@ -14,17 +14,18 @@ var courses = [
     cost: 10
   }
 ];
+export default {
+  showCourses: (req, res) => {
+    res.render("courses", {
+      offeredCourses: courses
+    });
+  },
 
-exports.showCourses = (req, res) => {
-  res.render("courses", {
-    offeredCourses: courses
-  });
-};
+  showSignUp:(req, res) => {
+    res.render("contact");
+  },
 
-exports.showSignUp = (req, res) => {
-  res.render("contact");
-};
-
-exports.postedSignUpForm = (req, res) => {
-  res.render("thanks");
+  postedSignUpForm:(req, res) => {
+    res.render("thanks");
+  }
 };
